@@ -1,4 +1,5 @@
 # kubectl commnds
+Folloiwng are some basic commands when working with k8s.
 
 ## Get nodes
 kubectl get nodes
