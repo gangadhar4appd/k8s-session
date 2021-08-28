@@ -1,27 +1,27 @@
-## kubectl commnds
+# kubectl commnds
 
-# Get nodes
+## Get nodes
 kubectl get nodes
 
-# Get pods
+## Get pods
 kubectl get pod
 
-# Get Services
+## Get Services
 kubectl get services
 
-# Create deployment.
+## Create deployment.
 kubectl create deployement --image=nginx nginx-depl
 
-# Get deployments.
+## Get deployments.
 kubectl get deployments
 
-# Get replicasets.
+## Get replicasets.
 kubectl get replicaset
 
-# Get edit depolyment nginx-depl
+## Get edit depolyment nginx-depl
 kubectl edit deployment nginx-depl
 
-## Debugging
+# Debugging
 
 # pod logs
 kubectl logs {podname}
