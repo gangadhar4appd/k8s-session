@@ -11,7 +11,7 @@ kubectl get pod
 kubectl get services
 
 ## Create deployment.
-kubectl create deployement --image=nginx nginx-depl
+kubectl create deployment nginx-depl --image=nginx 
 
 ## Get deployments.
 kubectl get deployments
@@ -25,11 +25,34 @@ kubectl edit deployment nginx-depl
 # Debugging
 
 # pod logs
-kubectl logs {podname}
+kubectl logs {pod-name}
 
 # Go to pod command line
-kubectl exec -it {podname} -- bin/bash
+kubectl exec -it {pod-name} -- bin/bash
 
-## create mongo deployment
+# create mongo deployment
+kubectl create deployment mongo-depl --image=mongo
 
+kubectl logs mogo-depl-{pod-name}
 
+kubectl describe pod mongo-depl-5fd6b7d4b4-bhqln
+
+# Delete deployments
+kubectl delete deployment mongo-depl
+
+kubectl delete deployment nginx-depl
+
+# Create or Edit conig file
+vim nginx-deployment.yaml
+
+kubectl appy -f nginx-deployment.yaml
+
+kubectl get pods
+
+kubectl get deployment
+
+# delete with config
+kubectl delete -f ngix-deployment.yaml
+
+# Metrics
+kubectl top
